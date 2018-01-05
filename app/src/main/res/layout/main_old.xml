@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	android:id="@+id/widget32"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:id="@+id/widget33"
+    android:layout_width="match_parent"
+    android:layout_height="538dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <requestFocus />
+    
+<Spinner
+    android:id="@+id/spRegion"
+    android:layout_width="125dp"
+    android:layout_height="50dp"
+    android:layout_alignLeft="@+id/widget37"
+    android:layout_alignTop="@+id/spCity" >
+	
+	</Spinner>
+	
+<TextView
+    android:id="@+id/widget37"
+    android:layout_width="wrap_content"
+    android:layout_height="17dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/spCity"
+    android:text="@string/region_prompt" />
+
+<Spinner
+    android:id="@+id/spCity"
+    android:layout_width="125dp"
+    android:layout_height="50dp"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/widget35" />
+
+<TextView
+    android:id="@+id/widget35"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:text="@string/city_prompt" />
+
+<TextView
+    android:id="@+id/textView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/spCity"
+    android:text="@string/street_prompt" />
+
+<AutoCompleteTextView
+    android:id="@+id/autoCompleteText_street"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignRight="@+id/spCity"
+    android:layout_below="@+id/textView1"
+    android:ems="10"
+    android:completionThreshold="1"
+    android:imeOptions="actionDone"
+    android:singleLine="true" />
+
+<Spinner
+    android:id="@+id/spSection"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/autoCompleteText_street"
+    android:layout_alignLeft="@+id/spRegion"
+    android:layout_alignRight="@+id/spRegion"
+    android:layout_alignTop="@+id/autoCompleteText_street"
+    android:layout_marginRight="25dp"
+    android:entries="@array/section_array" />
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/autoCompleteText_street"
+    android:layout_alignBottom="@+id/autoCompleteText_street"
+    android:layout_alignRight="@+id/spRegion"
+    android:text="@string/section_prompt"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<EditText
+    android:id="@+id/editText_lane"
+    android:layout_width="50dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignRight="@id/autoCompleteText_street"
+    android:layout_below="@+id/autoCompleteText_street"
+    android:layout_marginRight="40dp"
+    android:layout_marginTop="10dp"
+    android:digits="0123456789"
+    android:ems="10"
+    android:imeOptions="actionNext"
+    android:inputType="numberDecimal"
+    android:maxLength="4" >
+
+    <requestFocus />
+</EditText>
+
+<TextView
+    android:id="@+id/TextView01"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/editText_lane"
+    android:layout_alignBottom="@+id/editText_lane"
+    android:layout_alignRight="@id/autoCompleteText_street"
+    android:layout_marginRight="10dp"
+    android:text="@string/lane_prompt"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<EditText
+    android:id="@+id/editText_alley"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/TextView01"
+    android:layout_alignBottom="@+id/TextView01"
+    android:layout_alignRight="@id/spRegion"
+    android:layout_marginRight="50dp"
+    android:layout_toRightOf="@+id/autoCompleteText_street"
+    android:digits="0123456789"
+    android:ems="10"
+    android:imeOptions="actionNext"
+    android:inputType="numberDecimal"
+    android:maxLength="4" />
+
+<EditText
+    android:id="@+id/editText_num"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignRight="@+id/editText_lane"
+    android:layout_below="@+id/editText_lane"
+    android:layout_marginTop="16dp"
+    android:ems="10"
+    android:imeOptions="actionNext"
+    android:inputType="numberDecimal"
+    android:maxLength="4" />
+
+<TextView
+    android:id="@+id/TextView03"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/editText_num"
+    android:layout_alignBottom="@+id/editText_num"
+    android:layout_alignLeft="@+id/TextView01"
+    android:text="@string/number_prompt"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<TextView
+    android:id="@+id/TextView04"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/TextView03"
+    android:layout_alignBottom="@+id/TextView03"
+    android:layout_marginLeft="5dp"
+    android:layout_toRightOf="@id/TextView03"
+    android:text="@string/number1_prompt"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<EditText
+    android:id="@+id/EditText_floor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignRight="@+id/editText_num"
+    android:layout_below="@+id/editText_num"
+    android:layout_marginTop="15dp"
+    android:ems="10"
+    android:imeOptions="actionNext"
+    android:inputType="numberDecimal"
+    android:maxLength="2" />
+
+<TextView
+    android:id="@+id/TextView02"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/editText_alley"
+    android:layout_alignBottom="@+id/editText_alley"
+    android:layout_toLeftOf="@+id/textView2"
+    android:text="@string/alley_prompt"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<Button
+    android:id="@+id/button_submit"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/spSection"
+    android:layout_below="@+id/EditText_ext"
+    android:layout_marginTop="20dp"
+    android:text="@string/submit_prompt" />
+
+<Button
+    android:id="@+id/button_reset"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/button_submit"
+    android:layout_alignBottom="@+id/button_submit"
+    android:layout_toRightOf="@id/button_submit"
+    android:text="@string/reset_prompt" />
+
+<EditText
+    android:id="@+id/EditText_num1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@id/TextView04"
+    android:layout_alignRight="@id/TextView02"
+    android:layout_marginLeft="5dp"
+    android:layout_toRightOf="@id/TextView04"
+    android:ems="10"
+    android:imeOptions="actionNext"
+    android:inputType="numberDecimal"
+    android:maxLength="2" />
+
+<TextView
+    android:id="@+id/TextView05"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/EditText_floor"
+    android:layout_alignBottom="@+id/EditText_floor"
+    android:layout_alignLeft="@id/TextView01"
+    android:layout_toRightOf="@+id/textView1"
+    android:text="@string/floor_prompt"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<TextView
+    android:id="@+id/TextView06"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/TextView05"
+    android:layout_alignBottom="@+id/TextView05"
+    android:layout_marginLeft="5dp"
+    android:layout_toRightOf="@id/TextView05"
+    android:text="@string/number1_prompt"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<EditText
+    android:id="@+id/EditText_ext"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@id/TextView06"
+    android:layout_alignRight="@id/TextView02"
+    android:layout_marginLeft="5dp"
+    android:layout_toRightOf="@id/TextView06"
+    android:ems="10"
+    android:imeOptions="actionDone"
+    android:inputType="numberDecimal"
+    android:maxLength="2" />
+
+<EditText
+    android:id="@+id/editText_result"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/button_submit"
+    android:layout_marginTop="30dp"
+    android:clickable="false"
+    android:cursorVisible="false"
+    android:ems="10"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:hint="@string/result_hint" />
+
+<TextView
+    android:id="@+id/textView3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignTop="@id/editText_result"
+    android:layout_marginTop="-20dp"
+    android:text="@string/data_from" />
+
+</RelativeLayout>
+</ScrollView>

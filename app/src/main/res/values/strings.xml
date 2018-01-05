@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">行動鄰里</string>
+    <string name="city_prompt">(*)縣市</string>
+    <string-array name="section_array">
+	    <item>無</item>
+	    <item>一</item>
+	    <item>二</item>
+	    <item>三</item>
+	    <item>四</item>
+	    <item>五</item>
+	    <item>六</item>
+	    <item>七</item>
+	    <item>八</item>
+	    <item>九</item>
+	    <item>十</item>
+    </string-array>
+    <string name="region_prompt">(*)鄉鎮市區</string>
+    <string name="street_prompt">(*)街,路,或不規則門牌</string>   
+    <string name="section_prompt">段</string>
+    <string name="lane_prompt">巷</string>
+    <string name="alley_prompt">弄</string>
+    <string name="number_prompt">號　之</string>
+    <string name="number1_prompt">之</string>
+    <string name="floor_prompt">樓　之</string>
+    <string name="ext_prompt">之</string>
+    <string name="street_hint">必填</string>
+    <string name="num_hint">必填</string>      
+    <string name="submit_prompt">搜尋</string>
+    <string name="reset_prompt">清除</string>
+    <string name="result_prompt">搜尋結果：</string>
+    <string name="result_hint">1.若查無結果，將(巷、弄、樓、之)刪除，使搜尋條件減少再嘗試查詢。\n\n
+        2.如遇中文巷名，請一律輸入在"街,路,或不規則門牌"欄位裡，例如：舊城巷、宏毅二路北七巷。\n\n
+        3.地址如果是5-1號、6-1樓，請輸入5號之1、6樓之1。</string>
+    <string name="data_from">「資料來源：內政部戶政司」</string>
+</resources>

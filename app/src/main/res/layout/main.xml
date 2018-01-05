@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/widget32"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="538dp"
+	    android:orientation="vertical">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            
+			<TextView
+			    android:id="@+id/widget35"
+			    android:layout_weight="1"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:text="@string/city_prompt" />
+            
+            
+			<TextView
+			    android:id="@+id/widget37"
+			    android:layout_weight="1"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:text="@string/region_prompt" />
+        </LinearLayout>
+        
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            
+			
+			<Spinner
+			    android:id="@+id/spCity"
+			    android:layout_weight="1"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"/>
+			<Spinner
+			    android:id="@+id/spRegion"
+			    android:layout_weight="1"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp" 
+			    >
+			    </Spinner>
+        </LinearLayout>
+        
+        
+		<TextView
+		    android:id="@+id/textView1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/street_prompt" 
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+        
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            
+
+			<AutoCompleteTextView
+			    android:id="@+id/autoCompleteText_street"
+			    android:layout_weight="1"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:ems="10"
+			    android:completionThreshold="1"
+			    android:imeOptions="actionDone"
+			    android:singleLine="true" />
+			<RelativeLayout 
+			    android:layout_weight="1"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent">
+				<Spinner
+				    android:id="@+id/spSection"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_toLeftOf="@+id/textView2"
+				    android:entries="@array/section_array" />
+				<TextView
+				    android:id="@+id/textView2"
+				    android:layout_width="50dp"
+				    android:layout_height="match_parent"
+				    android:layout_alignParentRight="true"
+				    android:gravity="center"
+				    android:text="@string/section_prompt"
+				    android:textAppearance="?android:attr/textAppearanceLarge" />
+			</RelativeLayout>
+        </LinearLayout>
+        
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:baselineAligned="false">
+			
+			<RelativeLayout 
+			    android:layout_weight="1"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent">
+	            <EditText
+				    android:id="@+id/editText_lane"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_toLeftOf="@+id/TextView01"
+				    android:digits="0123456789"
+				    android:ems="10"
+				    android:imeOptions="actionNext"
+				    android:inputType="numberDecimal"
+				    android:maxLength="4" />
+				<TextView
+				    android:id="@+id/TextView01"
+				    android:layout_width="50dp"
+				    android:layout_height="match_parent"
+				    android:layout_alignParentRight="true"
+				    android:text="@string/lane_prompt"
+				    android:gravity="center"
+				    android:textAppearance="?android:attr/textAppearanceLarge" />
+			</RelativeLayout>
+			
+			<RelativeLayout 
+			    android:layout_weight="1"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent">
+				<EditText
+				    android:id="@+id/editText_alley"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_toLeftOf="@+id/TextView02"
+				    android:digits="0123456789"
+				    android:ems="10"
+				    android:imeOptions="actionNext"
+				    android:inputType="numberDecimal"
+				    android:maxLength="4" />
+				<TextView
+				    android:id="@+id/TextView02"
+				    android:layout_width="50dp"
+				    android:layout_height="match_parent"
+				    android:layout_alignParentRight="true"
+				    android:gravity="center"
+				    android:text="@string/alley_prompt"
+				    android:textAppearance="?android:attr/textAppearanceLarge" />
+			</RelativeLayout>
+		</LinearLayout>
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+        
+			<EditText
+			    android:id="@+id/editText_num"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_toLeftOf="@+id/TextView03"
+			    android:ems="10"
+			    android:imeOptions="actionNext"
+			    android:inputType="numberDecimal"
+			    android:maxLength="4" />
+			<TextView
+			    android:id="@+id/TextView03"
+			    android:layout_width="100dp"
+			    android:layout_height="match_parent"
+			    android:text="@string/number_prompt"
+			    android:layout_centerInParent="true"
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+			<EditText
+			    android:id="@+id/EditText_num1"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_toRightOf="@+id/TextView03"
+			    android:ems="10"
+			    android:imeOptions="actionNext"
+			    android:inputType="numberDecimal"
+			    android:maxLength="2" />
+        </RelativeLayout>
+        
+        
+        
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+        
+			<EditText
+			    android:id="@+id/EditText_floor"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_toLeftOf="@+id/TextView05"
+			    android:ems="10"
+			    android:imeOptions="actionNext"
+			    android:inputType="numberDecimal"
+			    android:maxLength="2" />
+			<TextView
+			    android:id="@+id/TextView05"
+			    android:gravity="center"
+			    android:layout_width="100dp"
+			    android:layout_height="wrap_content"
+			    android:layout_centerInParent="true"
+			    android:text="@string/floor_prompt"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+			<EditText
+			    android:id="@+id/EditText_ext"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_toRightOf="@+id/TextView05"
+			    android:ems="10"
+			    android:imeOptions="actionDone"
+			    android:inputType="numberDecimal"
+			    android:maxLength="2" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+        
+            
+            <Button
+			    android:id="@+id/button_submit"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"
+			    android:layout_toLeftOf="@+id/block1"
+			    android:text="@string/submit_prompt" 
+			    android:paddingRight="10dp"/>
+			
+            <View 
+                android:id="@+id/block1"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"/>
+            
+			<Button
+			    android:id="@+id/button_reset"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"
+			    android:layout_toRightOf="@+id/block1"
+			    android:text="@string/reset_prompt" 
+			    android:paddingRight="10dp"/>
+            
+        </RelativeLayout>
+        
+        
+        
+
+
+		<TextView
+		    android:id="@+id/textView3"
+		    android:layout_marginTop="10dp"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/data_from" />
+
+
+		<EditText
+			android:id="@+id/editText_result"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="3dp"
+			android:ems="10"
+			android:hint="@string/result_hint"
+			android:editable="false"
+			android:textIsSelectable="true" />
+		
+
+
+    </LinearLayout>
+    
+
+</ScrollView>
