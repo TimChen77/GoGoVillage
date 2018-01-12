@@ -420,8 +420,11 @@ public class GoGoVillage extends Activity {
                 String tkt = jObject.getString("tkt");
                 params[0].add(new BasicNameValuePair("tkt", tkt));
             } catch (Exception e) {
+                result = e.getMessage();
+                result += "\n可能內政部網站掛了:(";
                 return result;
             }
+
 
             HttpResponse res;
             HttpPost httppost = new HttpPost(doorplate_query_url);
@@ -441,12 +444,14 @@ public class GoGoVillage extends Activity {
                     } else
                         result = "查無結果";
                 } else {
-                    result = "Connection error.";
+                    if (res != null)
+                        result = res.getStatusLine().toString();
+                    result += "\n可能內政部網站掛了:(";
                 }
 
             } catch (Exception e) {
-                Toast.makeText(GoGoVillage.this, "Time out.",
-                        Toast.LENGTH_SHORT).show();
+                result = e.getMessage();
+                result += "\n可能內政部網站掛了:(";
             }
 
             return result;
@@ -485,7 +490,6 @@ public class GoGoVillage extends Activity {
                 if (res.getStatusLine().getStatusCode() == 200)
                     result = EntityUtils.toString(res.getEntity());
             } catch (Exception e) {
-                Toast.makeText(context, "Time out.", Toast.LENGTH_SHORT).show();
             }
 
             return result;
@@ -494,8 +498,6 @@ public class GoGoVillage extends Activity {
         @SuppressLint("NewApi")
         protected void onPostExecute(String result) {
             if (result.isEmpty()) {
-                Toast.makeText(GoGoVillage.this, "Connection error", Toast.LENGTH_LONG)
-                        .show();
                 return;
             }
             String[] atcList = parseXml(result);
