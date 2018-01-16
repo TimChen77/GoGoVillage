@@ -394,7 +394,6 @@ public class GoGoVillage extends Activity {
 
         @Override
         protected void onPreExecute() {
-
             mDialog = new ProgressDialog(context);
             mDialog.setMessage("查詢中...");
             mDialog.setCancelable(false);
@@ -404,9 +403,8 @@ public class GoGoVillage extends Activity {
 
         @Override
         protected String doInBackground(List<NameValuePair>... params) {
-            if (!isNetworkAvailable(GoGoVillage.this)) {
-                return "";
-            }
+            if (!isNetworkAvailable(GoGoVillage.this))
+                return "無法連線 請檢查您的網路狀態";
 
             String result = "";
 
@@ -425,12 +423,10 @@ public class GoGoVillage extends Activity {
                 return result;
             }
 
-
-            HttpResponse res;
-            HttpPost httppost = new HttpPost(doorplate_query_url);
             try {
-                httppost.setEntity(new UrlEncodedFormEntity(params[0],
-                        HTTP.UTF_8));
+                HttpResponse res;
+                HttpPost httppost = new HttpPost(doorplate_query_url);
+                httppost.setEntity(new UrlEncodedFormEntity(params[0], HTTP.UTF_8));
                 res = new DefaultHttpClient().execute(httppost);
                 if (res != null && res.getStatusLine().getStatusCode() == 200) {
                     JSONObject object = new JSONObject(EntityUtils.toString(res.getEntity()));
@@ -465,7 +461,8 @@ public class GoGoVillage extends Activity {
         @Override
         @SuppressLint("NewApi")
         protected void onPostExecute(String result) {
-            mDialog.dismiss();
+            if (mDialog != null && mDialog.isShowing())
+                mDialog.dismiss();
             ed_result.setText(result);
         }
 
